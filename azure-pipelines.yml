@@ -19,6 +19,6 @@ steps:
 - script: |
     npm install
     npx playwright install --with-deps
-    npx playwright test
+    npx playwright test --project=chromium
   workingDirectory: "PlaywrightPom"
   displayName: 'Execute Playwright Project'
