@@ -1,0 +1,17 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+  displayName: 'Checkout Repo'
+
+# Install dependencies & run Playwright tests
+- script: |
+    npm install
+    npx playwright install --with-deps
+    npx playwright test
+  workingDirectory: "PlaywrightPom"
+  displayName: 'Execute Playwright Project'
