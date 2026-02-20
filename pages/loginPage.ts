@@ -19,6 +19,8 @@ export class LoginPage {
 
     async gotoLoginPage() {
         await this.page.goto('https://www.saucedemo.com/');
+        await this.page.setViewportSize({ width: 2560, height: 1440 });
+        await this.page.waitForTimeout(2000);
     }
 
     async login(username: string, password: string) {

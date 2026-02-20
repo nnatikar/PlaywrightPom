@@ -51,10 +51,3 @@ test('Valid Login Test', async ({ page }) => {
 
 });
 
-// test.only('Invalid Login Test', async ({ page }) => {
-//     const loginPage = new LoginPage(page);
-//     await loginPage.gotoLoginPage();
-//     await loginPage.login(loginData.invalidUsername.username, loginData.invalidUsername.password);
-//     await expect(loginPage.loginErrorMessage()).toBe(loginData.invalidUsername.expectedError);
-// });
-
