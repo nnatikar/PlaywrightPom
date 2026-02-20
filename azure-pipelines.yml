@@ -4,9 +4,16 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+resources:
+  repositories:
+    - repository: PlaywrightPom   # alias
+      type: github
+      name: nnatikar/PlaywrightPom      # GitHub path
+      endpoint: nnatikar # service connection name
+
 steps:
 - checkout: self
-  displayName: 'Checkout Repo'
+- checkout: PlaywrightPom
 
 # Install dependencies & run Playwright tests
 - script: |
